@@ -13,7 +13,7 @@
  *
  * @see       https://github.com/seikan/Cart
  */
-namespace Hahadu\CartClass;
+namespace Hahadu\ThinkCartClass;
 use think\facade\Cookie;
 use think\facade\Session;
 use think\facade\Request;
