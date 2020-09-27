@@ -36,7 +36,7 @@ $cart->clear();  //清空购物车
 ```
 //cart.php文件
 return[
-  'cart_prefix' = 'youp prefix' //设置购物车前缀
+  'cart_prefix' = 'youp prefix' //设置购物车前缀 默认为'cartId_'
 
 ]
 
