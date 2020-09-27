@@ -19,6 +19,7 @@ namespace Hahadu\ThinkCartClass;
 use think\facade\Cookie;
 use think\facade\Session;
 use think\facade\Request;
+use think\facade\Config;
 class ThinkCartClass
 {
 	/**
@@ -27,6 +28,8 @@ class ThinkCartClass
 	 * @var string
 	 */
 	protected $cartId;
+
+	protected $cartPrefix = '';
 
 	/**
 	 * 购物车最大列数量.
@@ -63,6 +66,7 @@ class ThinkCartClass
 	 */
 	public function __construct($options = [])
 	{
+        $this->cartPrefix = (Config::get('cart.cart_prefix')&&(Config::get('cart.cart_prefix')!=''))?(Config::get('cart.cart_prefix')):'cartId_';
 
 		if (isset($options['cartMaxItem']) && preg_match('/^\d+$/', $options['cartMaxItem'])) {
 			$this->cartMaxItem = $options['cartMaxItem'];
@@ -76,9 +80,9 @@ class ThinkCartClass
 			$this->cartCookie = true;
 		}
 		if(isset($options['cartId']) && $options['cartId']){
-		    $this->cartId = 'cartId_'.$options['cartId'];
+		    $this->cartId = $this->cartPrefix.$options['cartId'];
         }else{
-            $this->cartId = 'cartId_'.md5((Request::has('HTTP_HOST','server')) ? Request::server('HTTP_HOST') : 'CooleCartClass') ;
+            $this->cartId = $this->cartPrefix.md5((Request::has('HTTP_HOST','server')) ? Request::server('HTTP_HOST') : 'CooleCartClass') ;
         }
 
 
@@ -140,7 +144,7 @@ class ThinkCartClass
 	}
 
 	/**
-	 * 商品sku数量.
+	 * 商品sku总数.
 	 *
 	 * @param string $attribute
 	 *
