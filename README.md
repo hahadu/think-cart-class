@@ -12,7 +12,9 @@ think-cart-class是一个基于thinkphp6的购物车类
 $cart = new Hahadu\ThinkCartClass\ThinkCartClass([
             'cartCookie' => true, //是否开启cookie ，默认为false 关闭cookie时将自动选择session
 
-         //   'cartId' => md5($username.Request::server('http_host')), //设置购物车id 会自动加上'cartId_'前缀
+         //   'cartId' => md5($username.Request::server('http_host')), //设置购物车id 会自动加上'cartId_'前缀，
+         //前缀可在项目配置文件‘cart.php’中设置
+
 ]);
 
 $cart->getTotalItem()获取购物车商品数量
@@ -29,7 +31,13 @@ $cart->getItems() //列出购物车里所有商品
 
 $cart->clear();  //清空购物车 
 
+```
+配置文件：在您的项目配置文件config目录中创建cart.php文件
+```
+//cart.php文件
+return[
+  'cart_prefix' = 'youp prefix' //设置购物车前缀
 
-
+]
 
 ```
