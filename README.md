@@ -9,7 +9,7 @@ think-cart-class是一个基于thinkphp6的购物车类
 ```
 <?php
 
-$cart = new Hahadu\ThinkCartClass\CartBaseClass([
+$cart = new Hahadu\ThinkCartClass\ThinkCartClass([
             'cartCookie' => true, //是否开启cookie ，默认为false 关闭cookie时将自动选择session
 
          //   'cartId' => md5($username.Request::server('http_host')), //设置购物车id 会自动加上'cartId_'前缀

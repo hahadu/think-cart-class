@@ -17,7 +17,7 @@ namespace Hahadu\ThinkCartClass;
 use think\facade\Cookie;
 use think\facade\Session;
 use think\facade\Request;
-class CartBaseClass
+class ThinkCartClass
 {
 	/**
 	 * An unique ID for the cart.
