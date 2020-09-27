@@ -1,18 +1,20 @@
 <?php
 
 /**
- * Cart: A very simple PHP cart library.
- *
- * Copyright (c) 2017 Sei Kan
- *
- * Distributed under the terms of the MIT License.
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright  2017 Sei Kan <seikan.dev@gmail.com>
- * @license    http://www.opensource.org/licenses/mit-license.php The MIT License
- *
- * @see       https://github.com/seikan/Cart
- */
+ *  +----------------------------------------------------------------------
+ *  | Created by  hahadu (a low phper and coolephp)
+ *  +----------------------------------------------------------------------
+ *  | Copyright (c) 2020. [hahadu] All rights reserved.
+ *  +----------------------------------------------------------------------
+ *  | SiteUrl: https://github.com/hahadu
+ *  +----------------------------------------------------------------------
+ *  | Author: hahadu <582167246@qq.com>
+ *  +----------------------------------------------------------------------
+ *  | Date: 2020/9/27 下午1:58
+ *  +----------------------------------------------------------------------
+ *  | Description:   thinkphp6 cart library
+ *  +----------------------------------------------------------------------
+ **/
 namespace Hahadu\ThinkCartClass;
 use think\facade\Cookie;
 use think\facade\Session;
